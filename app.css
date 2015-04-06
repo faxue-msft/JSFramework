@@ -1,0 +1,152 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+
+button.link {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: deepskyblue;
+}
+
+div.sample-frame {
+    width: 800px;
+    height: 150px;
+    border: solid;
+    border-width: 1px;
+    border-color: blue;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+}
+
+.show-border {
+    border: dashed;
+    border-width: 1px;
+    border-color: red;
+    margin: 5px;
+}
+
+.svg-icon-14px {
+    padding: 2px;
+}
+
+.svg-icon-16px {
+    padding: 1px;
+}
+
+.svg-background {
+    width: 14px;
+    height: 14px;
+    background: url(SVG\\TimelineMarkException_14x.svg);
+    float: left;
+}
+
+    .svg-background:hover {
+        width: 16px;
+        height: 16px;
+        background: url(SVG\\TimelineMarkException_16x.svg);
+    }
+
+.box-nohover {
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+.diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 20px solid #05ed08;
+    position: relative;
+    top: -50px;
+    float: left;
+}
+
+    .diamond:after {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top: 20px;
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-top: 70px solid #05ed08;
+    }
+
+    .diamond:hover {
+        border-bottom: 20px solid #cccccc;
+    }
+
+.rotate {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background: url(SVG\\TimelineMarkException_14x.svg);
+    background-repeat: no-repeat; 
+    float: left;
+}
+    .rotate:hover {
+        border-color: green;
+    }
+
+div.rotate-nobackground {
+    width: 9.899px;
+    height: 9.899px;
+    margin: 2.05px;
+    transform: rotate(45deg);
+    background: transparent;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+    .rotate-nobackground:hover {
+        background-color:lightblue;
+    }
+
+div.svg-background-nohover {
+    width: 14px;
+    height: 14px;
+    pointer-events: none;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+div.debug-event-no-icon {
+    position: absolute;
+    width: 7.9px;
+    height: 7.9px;
+    margin-top: 2.05px;
+    margin-left: -4.95px;
+    margin-right: 2.05px;
+    margin-bottom: 2.05px;
+    transform: rotate(45deg);
+    border: solid;
+    border-color: #F6F6F6;
+    border-width: 1px;
+    background-color: red;
+    top: 4.5px;
+}
+
+    div.debug-event-no-icon:hover {
+        width: 9.314px;
+        height: 9.314px;
+        margin-top: 1.343px;
+        margin-left: -6.657px;
+        margin-right: 1.343px;
+        margin-bottom: 1.343px;
+    }
+
+div.no-binding {
+    position:absolute;
+    background-image:url(custom.png);
+    height:14px;
+    width:14px;
+}

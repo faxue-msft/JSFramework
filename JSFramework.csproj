@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{C52CF3AD-07FE-4D07-99F0-7F8800B8D43E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="Core\Controls\controls.css" />
+    <Content Include="Core\Controls\Templates.html" />
+    <Content Include="custom.png" />
+    <Content Include="index.html" />
+    <Content Include="SVG\TimelineMarkExceptionHistoricalSelected_14x.svg" />
+    <Content Include="SVG\TimelineMarkExceptionHistoricalSelected_16x.svg" />
+    <Content Include="SVG\TimelineMarkExceptionHistorical_14x.svg" />
+    <Content Include="SVG\TimelineMarkExceptionHistorical_16x.svg" />
+    <Content Include="SVG\TimelineMarkExceptionLiveSelected_14x.svg" />
+    <Content Include="SVG\TimelineMarkExceptionLiveSelected_16x.svg" />
+    <Content Include="SVG\TimelineMarkException_14x.svg" />
+    <Content Include="SVG\TimelineMarkException_16x.svg" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Core\assert.ts" />
+    <TypeScriptCompile Include="Core\common.d.ts" />
+    <TypeScriptCompile Include="Core\Controls\Button.ts" />
+    <TypeScriptCompile Include="Core\Controls\CheckBoxMenuItem.ts" />
+    <TypeScriptCompile Include="Core\Controls\ComboBox.ts" />
+    <TypeScriptCompile Include="Core\Controls\ComboBoxMenuItem.ts" />
+    <TypeScriptCompile Include="Core\Controls\ContentControl.ts" />
+    <TypeScriptCompile Include="Core\Controls\ControlUtilities.ts" />
+    <TypeScriptCompile Include="Core\Controls\ItemsControl.ts" />
+    <TypeScriptCompile Include="Core\Controls\MenuControl.ts" />
+    <TypeScriptCompile Include="Core\Controls\MenuItem.ts" />
+    <TypeScriptCompile Include="Core\Controls\Panel.ts" />
+    <TypeScriptCompile Include="Core\Controls\PopupControl.ts" />
+    <TypeScriptCompile Include="Core\Controls\RibbonControl.ts" />
+    <TypeScriptCompile Include="Core\Controls\TextBox.ts" />
+    <TypeScriptCompile Include="Core\Controls\TextBoxMenuItem.ts" />
+    <TypeScriptCompile Include="Core\Controls\ToggleButton.ts" />
+    <TypeScriptCompile Include="Core\Controls\ToolbarControl.ts" />
+    <TypeScriptCompile Include="Core\errorHandling.ts" />
+    <TypeScriptCompile Include="Core\Framework\Binding\Binding.ts" />
+    <TypeScriptCompile Include="Core\Framework\Binding\CommonConverters.ts" />
+    <TypeScriptCompile Include="Core\Framework\Binding\IConverter.ts" />
+    <TypeScriptCompile Include="Core\Framework\EventSource.ts" />
+    <TypeScriptCompile Include="Core\Framework\IControl.ts" />
+    <TypeScriptCompile Include="Core\Framework\IEventHandler.ts" />
+    <TypeScriptCompile Include="Core\Framework\IEventRegistration.ts" />
+    <TypeScriptCompile Include="Core\Framework\Model\CollectionChangedAction.ts" />
+    <TypeScriptCompile Include="Core\Framework\Model\IObservable.ts" />
+    <TypeScriptCompile Include="Core\Framework\Model\Observable.ts" />
+    <TypeScriptCompile Include="Core\Framework\Model\ObservableCollection.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\ITemplateRepository.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\HtmlTemplateRepository.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\ScriptTemplateRepository.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\TemplateControl.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\TemplateDataAttributes.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\TemplateDataBinding.ts" />
+    <TypeScriptCompile Include="Core\Framework\Templating\TemplateLoader.ts" />
+    <TypeScriptCompile Include="Core\isDebugBuild.ts" />
+    <TypeScriptCompile Include="Core\KeyCodes.ts" />
+    <TypeScriptCompile Include="Core\Plugin.d.ts" />
+    <TypeScriptCompile Include="models.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>JSFramework</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3142</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3142/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptOutFile>out.js</TypeScriptOutFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <!--
+        Button Control
+    -->
+
+    <script id="defaultButtonTemplate" type="text/html">
+        <div class="BPT-button" tabindex="1"></div>
+    </script>
+
+    <script id="iconButton24x24" type="text/html">
+        <div class="BPT-button iconButton24x24" tabindex="1"><span class="buttonIcon"></span></div>
+    </script>
+
+    <script id="menuButton33x24" type="text/html">
+        <div class="BPT-button menuButton33x24" tabindex="1"><span class="buttonIcon"></span></div>
+    </script>
+
+    <script id="menuButton33x24x5" type="text/html">
+        <div class="BPT-button menuButton33x24 imageStates5" tabindex="1"><span class="buttonIcon"></span></div>
+    </script>
+
+    <script id="iconButton" type="text/html">
+        <div class="BPT-button iconButton" tabindex="1"><span class="buttonIcon"></span></div>
+    </script>
+
+    <script id="labeledIconButton" type="text/html">
+        <div class="BPT-button labeledIconButton" tabindex="1">
+            <span class="buttonIcon"></span>
+            <span class="buttonText"
+                  data-controlbinding="innerText:content"></span>
+        </div>
+    </script>
+
+    <!--
+        Toolbar Control
+    -->
+
+    <script id="defaultToolbarTemplate" type="text/html">
+        <div class="BPT-Toolbar" role="toolbar">
+            <div class="BPT-ToolbarContents">
+                <span class="BPT-ToolTitle"
+                      data-controlbinding="innerText:title,
+                                           attr-aria-label:title"></span>
+
+                <div data-name="_toolbarPanel"
+                     data-control="Common.TemplateControl"
+                     data-controlbinding="model:model,
+                                          templateId:panelTemplateId"
+                     data-options="className:buttons"></div>
+            </div>
+        </div>
+    </script>
+
+    <script id="toolbarTemplateWithSearchBox" type="text/html">
+        <div class="BPT-Toolbar" role="toolbar">
+            <div class="BPT-ToolbarContents">
+                <span class="BPT-ToolTitle"
+                      data-controlbinding="innerText:title,
+                                           attr-aria-label:title"></span>
+
+                <div data-name="_toolbarPanel"
+                     data-control="Common.TemplateControl"
+                     data-controlbinding="model:model,
+                                          templateId:panelTemplateId"
+                     data-options="className:buttons"></div>
+
+                <div id="searchBoxBorder" class="BPT-SearchBox-Border">
+                    <input type="text" id="searchbox" class="BPT-SearchBox" tabindex="1" role="search" />
+                    <div id="searchPreviousResult" class="BPT-Search-Button" role="button" tabindex="1">
+                        <div class="BPT-Search-Previous"></div>
+                    </div>
+                    <div id="searchNextResult" class="BPT-Search-Button" role="button" tabindex="1">
+                        <div class="BPT-Search-Next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <!--
+        Menu Control
+    -->
+
+    <script id="menuControlTemplate" type="text/html">
+        <div class="BPT-menuControl" role="menu">
+            <div data-control="Common.TemplateControl"
+                 data-controlbinding="model:model,
+                                      templateId:menuItemsTemplateId"
+                 data-options="className:BPT-menuContent"></div>
+        </div>
+    </script>
+
+    <script id="menuItemTemplate" type="text/html">
+        <li class="menuItem" role="menuitem" tabindex="0"
+            data-controlbinding="attr-aria-label:tooltip, 
+                                 attr-data-plugin-vs-tooltip:tooltip">
+            <div class="gutter"></div>
+            <span data-controlbinding="innerText:content,
+                                       attr-aria-label:content"></span>
+        </li>
+    </script>
+
+    <script id="menuItemCheckMarkTemplate" type="text/html">
+        <li class="menuItem" role="menuitemcheckbox" tabindex="0"
+            data-controlbinding="attr-aria-label:tooltip, 
+                                 attr-data-plugin-vs-tooltip:tooltip">
+            <img class="menuToggleItem gutter"
+                 data-options="src:plugin-menu-item-checkmark; converter=Common.CommonConverters.ThemedImageConverter" />
+
+            <span data-controlbinding="innerText:content,
+                                       attr-aria-label:content"></span>
+        </li>
+    </script>
+
+    <script id="menuItemCheckBoxTemplate" type="text/html">
+        <li class="menuItem" role="menuitemcheckbox" tabindex="0"
+            data-controlbinding="attr-aria-label:tooltip, 
+                                 attr-data-plugin-vs-tooltip:tooltip">
+            <input
+                type="checkbox" tabindex="-1"
+                data-name="BPT-menuItemCheckBox"
+                data-controlbinding="checked:isChecked; mode=twoway" />
+            <span data-controlbinding="innerText:content,
+                                       attr-aria-label:content"></span>
+        </li>
+    </script>
+
+    <script id="menuItemComboBoxTemplate" type="text/html">
+        <li class="menuItem comboBoxMenuItem" role="menuitem" tabindex="-1">
+            <div 
+                data-control="Common.Controls.ComboBox"
+                data-name="BPT-menuItemComboBox"
+                data-controlbinding="items:items,
+                                     selectedValue:selectedValue; mode=twoway,
+                                     tooltip:tooltip"
+                data-options="tabIndex:0">
+            </div>
+        </li>
+    </script>
+
+    <script id="menuItemTextBoxTemplate" type="text/html">
+        <li class="menuItem textBoxMenuItem" role="menuitem" tabindex="-1">
+            <div 
+                data-control="Common.Controls.TextBox"
+                data-name="BPT-menuItemTextBox"
+                data-controlbinding="isEnabled:isEnabled,
+                                     placeholder:placeholder,
+                                     text:content; mode=twoway,
+                                     tooltip:tooltip"
+                data-options="clearOnEscape:1,
+                              tabIndex:0,
+                              updateOnInput:1">
+            </div>
+        </li>
+    </script>
+
+    <!--
+        ComboBox Control
+    -->
+
+    <script id="defaultComboBoxTemplate" type="text/html">
+        <select data-controlbinding="value:selectedValue; mode=twoway"
+                data-options="tabIndex:0"></select>
+    </script>
+
+    <script id="defaultComboBoxItemTemplate" type="text/html">
+        <option data-binding="attr-aria-label:label,
+                              attr-data-plugin-vs-tooltip:tooltip,
+                              title:tooltip,
+                              text:text,
+                              value:value"></option>
+    </script>
+
+    <!--
+        TextBox Control
+    -->
+
+    <script id="defaultTextBoxTemplate" type="text/html">
+        <input type="text"
+               class="BPT-TextBox"
+               data-controlbinding="attr-data-plugin-vs-tooltip:tooltip,
+                                    value:text; mode=twoway,
+                                    placeholder:placeholder" />
+    </script>
+</body>
+</html>

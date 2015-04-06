@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+
+    <script src="out.js"></script>
+
+    <!-- Sample list templates -->
+    <script id="fxUsageSampleTemplate" type="text/html">
+        <button class="link" data-binding="innerHTML:sampleName" data-name="fxUsageSampleButton">
+        </button>
+    </script>
+
+    <script id="sampleListTemplate" type="text/html">
+        <div>
+        </div>
+    </script>
+
+    <script id="timerButtonTemplate" type="text/html">
+        <div class="button">
+            <span data-binding="innerText:content"></span>
+        </div>
+    </script>
+
+    <!-- SVG templates -->
+    <script id="svgcontrolTemplate1" type="text/html">        
+        <img class="show-border" src="svg\TimelineMarkException_14x.svg" />
+    </script>
+
+    <script id="svgcontrolTemplate2" type="text/html">
+        <img data-binding="src:svgPath,className:cssClass" />
+    </script>
+
+    <script id="svgcontrolTemplate3" type="text/html">
+        <img class="show-border" data-binding="src:svgPath,style.padding:svgPadding" />
+    </script>
+
+    <script id="svgBgTemplate1" type="text/html">
+        <div class="svg-background show-border"></div>
+    </script>
+
+    <script id="svgBgTemplate2" type="text/html">
+        <div class="box-nohover show-border" data-binding="style.background:svgPath,style.background-position-x:svgPadding,style.background-position-y:svgPadding"></div>
+    </script>
+
+    <script id="shapedButtonTemplate1" type="text/html">
+        <div class="diamond"></div>
+    </script>
+
+    <script id="shapedButtonTemplate2" type="text/html">
+        <div class="show-border rotate"></div>
+    </script>
+
+    <script id="shapedButtonTemplate3" type="text/html">
+        <div style="position:relative;left:150px;">
+            <div class="svg-background" style="position:absolute;left:10px;z-index:3;"></div>
+            <div class="svg-background" style="position:absolute;left:13px;z-index:4;"></div>
+            <div class="svg-background" style="position:absolute;left:16px;z-index:5;"></div>
+        </div>
+    </script>
+
+    <script id="shapedButtonTemplate4" type="text/html"> 
+        <div style="position:relative;left:180px;">
+            <img class="show-border" src="svg\TimelineMarkException_14x.svg" style="position:absolute;left:10px;z-index:3;" />
+            <img class="show-border" src="svg\TimelineMarkException_14x.svg" style="position:absolute;left:14px;z-index:4;" />
+        </div>
+    </script>
+
+    <script id="2divOverlap1" type="text/html">
+        <div style="position:absolute;" data-binding="style.left:position.x,style.top:position.y">
+            <div class="svg-background-nohover" data-binding="style.background:svgPath"></div>
+            <div class="rotate-nobackground"></div>
+        </div>
+    </script>
+
+    <script id="productDivs" type="text/html">
+        <div style="position:absolute;background-image:url(custom.png);height:14px;width:14px" data-binding="style.left:position.x,style.top:position.y">
+            <div class="rotate-nobackground"></div>
+        </div>
+    </script>
+
+    <script id="bgDiv1" type="text/html">
+        <div class="debug-event-no-icon" data-binding="style.left:position.x,style.top:position.y">
+        </div>
+    </script>
+
+</head>
+<body>
+    <h1>TypeScript HTML App</h1>
+
+    <div id="content"></div>
+    <div id="sample-frame" class="sample-frame">
+        <div id="sample-div">
+
+        </div>
+    </div>
+</body>
+</html>
